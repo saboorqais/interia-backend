@@ -15,11 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from dashboard.views import ProductList, ProductDetail, CategoryList, CategoryDetail
+from dashboard.views import ProductList, ProductDetail, CategoryList, CategoryDetail , MyObtainAuthToken
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('products/', ProductList.as_view()),
     path('products/<int:pk>/', ProductDetail.as_view()),
     path('category/', CategoryList.as_view()),
     path('category/<int:pk>/', CategoryDetail.as_view()),
+
 ]
